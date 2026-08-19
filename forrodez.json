@@ -88,5 +88,8 @@
 {"id":86,"artist":"CORAO VELHO A","title":"Vontade-Na-Vaquejada","genero":"POP","src":"CORAOVELHOA-Vontade-Na-Vaquejada.mp3"},
 {"id":87,"artist":"FOM-FONROM","title":"FONFOM-AVontadeNaVaquejada","genero":"POP","src":"FOM-FONROM-FONFOM-AVontadeNaVaquejada.mp3"},
 {"id":88,"artist":"MULHER-DE-GADO-A","title":"Vontade-Na-Vaquejada","genero":"POP","src":"MULHER-DE-GADO-A-Vontade-Na-Vaquejada.mp3"},
-{"id":89,"artist":"SO-NO-NANE NANE A","title":"VontadeNaVaquejada","genero":"POP","src":"SO-NO-NANENANEA-VontadeNaVaquejada.mp3"}     
+{"id":89,"artist":"SO-NO-NANE NANE A","title":"VontadeNaVaquejada","genero":"POP","src":"SO-NO-NANENANEA-VontadeNaVaquejada.mp3"},
+ {"id":90,"artist":"Tarcisio do Acordeon","title":"ABC DA VAQUEJADA","genero":"POP","src":"ABCDAVAQUEJADA_TarcisiodoAcordeon.mp3"},
+{"id":91,"artist":"Z Vaqueiro Wesley Safad NATTAN","title":"DNA do Mato","genero":"POP","src":"DNAdoMato_ZVaqueiroWesleySafadNATTAN.mp3"},
+{"id":92,"artist":"Sacode Tony Guerra","title":"Guitarrinha","genero":"POP","src":"Guitarrinha_SacodeTonyGuerra.mp3"}     
 ] 
