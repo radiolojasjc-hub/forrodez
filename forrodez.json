@@ -1,5 +1,4 @@
-
-   [
+[
 {"id":1,"artist":"Alinne Reis","title":"e Ze Cantor Remdio pra raiva","genero":"FORRÓ","src":"AlinneReis-eZeCantorRemdiopraraiva.m4a"},
 {"id":2,"artist":"Banda-encantos","title":"estrela","genero":"FORRÓ","src":"Banda-encantos-estrela.m4a"},
 {"id":3,"artist":"Banda-libnos","title":"Horizonte","genero":"FORRÓ","src":"Banda-libnos-Horizonte.m4a"},
@@ -80,7 +79,7 @@
 {"id":78,"artist":"Desejo-de-Menina","title":"Moldura","genero":"FORRÓ","src":"Desejo-de-Menina-Moldura.mp3"},
 {"id":79,"artist":"-Juarez","title":"Que Saber Meu Nome","genero":"FORRÓ","src":"-Juarez-QueSaberMeuNome.mp3"},
 {"id":80,"artist":"Cavalo-de-pau","title":"Seis corada","genero":"FORRÓ","src":"Cavalo-de-pau-Seiscorada.m4a"},
- {"id":81,"artist":"Fernandinha eLagosta Bronzeada","title":"Mensagens  Pra Vc","genero":"POP","src":"FernandinhaLagostaBronzeada-MensagensPraVc.mp3"},
+{"id":81,"artist":"Fernandinha eLagosta Bronzeada","title":"Mensagens  Pra Vc","genero":"POP","src":"FernandinhaLagostaBronzeada-MensagensPraVc.mp3"},
 {"id":82,"artist":"Nildinha -Dama Louise","title":"Disse A Deus","genero":"POP","src":"Nildinha-DamaLouise-DisseADeus.mp3"},
 {"id":83,"artist":"AVontade Na Vaquejada","title":"AMOR NO GALOPE Vontade","genero":"POP","src":"AVontadeNaVaquejada-AMORNOGALOPEVontade.mp3"},
 {"id":84,"artist":"CABRA DESMANTELADO","title":"AVontade-Na-aquejada","genero":"POP","src":"CABRADESMANTELADO-AVontade-Na-aquejada.mp3"},
@@ -89,23 +88,22 @@
 {"id":87,"artist":"FOM-FONROM","title":"FONFOM-AVontadeNaVaquejada","genero":"POP","src":"FOM-FONROM-FONFOM-AVontadeNaVaquejada.mp3"},
 {"id":88,"artist":"MULHER-DE-GADO-A","title":"Vontade-Na-Vaquejada","genero":"POP","src":"MULHER-DE-GADO-A-Vontade-Na-Vaquejada.mp3"},
 {"id":89,"artist":"SO-NO-NANE NANE A","title":"VontadeNaVaquejada","genero":"POP","src":"SO-NO-NANENANEA-VontadeNaVaquejada.mp3"},
- {"id":90,"artist":"Tarcisio do Acordeon","title":"ABC DA VAQUEJADA","genero":"POP","src":"ABCDAVAQUEJADA_TarcisiodoAcordeon.mp3"},
+{"id":90,"artist":"Tarcisio do Acordeon","title":"ABC DA VAQUEJADA","genero":"POP","src":"ABCDAVAQUEJADA_TarcisiodoAcordeon.mp3"},
 {"id":91,"artist":"Z Vaqueiro Wesley Safad NATTAN","title":"DNA do Mato","genero":"POP","src":"DNAdoMato_ZVaqueiroWesleySafadNATTAN.mp3"},
 {"id":92,"artist":"Sacode Tony Guerra","title":"Guitarrinha","genero":"POP","src":"Guitarrinha_SacodeTonyGuerra.mp3"},
- {"id":93,"artist":"Avontade","title":"Cavaleiros Do Cump3","genero":"POP","src":"CavaleirosDoCump3_Avontade.mp3"},
+{"id":93,"artist":"Avontade","title":"Cavaleiros Do Cump3","genero":"POP","src":"CavaleirosDoCump3_Avontade.mp3"},
 {"id":94,"artist":"Mano Walter Limo com Mel","title":"Anjo Querubimmp3","genero":"POP","src":"AnjoQuerubimmp3_ManoWalterLimocomMel.mp3"},
 {"id":95,"artist":"Mano Walter Sirano e Sirino","title":"Casa Separa Waquejada do Manomp3","genero":"POP","src":"CasaSeparaWaquejadadoManomp3_ManoWalterSiranoeSirino.mp3"},
 {"id":96,"artist":"Wesley Safado Eliane e Solange","title":"Almeida Amor ou Paix amp3","genero":"POP","src":"AlmeidaAmorouPaixamp3_WesleySafadoElianeeSolange.mp3"},
 {"id":97,"artist":"William Sanfona Santana o Cantador","title":"UTOPIA mp3","genero":"POP","src":"UTOPIAmp3_WilliamSanfonaSantanaoCantador.mp3"},
-{"id":98,"artist":"Vitor Fernandes","title":"CRISTAL QUEBRADO FANTASIAS mp3","genero":"POP","src":"CRISTALQUEBRADOFANTASIASmp3_VitorFernandes.mp3"}  
+{"id":98,"artist":"Vitor Fernandes","title":"CRISTAL QUEBRADO FANTASIAS mp3","genero":"POP","src":"CRISTALQUEBRADOFANTASIASmp3_VitorFernandes.mp3"},  
 {"id":100,"artist":"Vitor Fernandes e Dorgival Dantas","title":"PRIMEIRO PASSO  mp3","genero":"POP","src":"PRIMEIROPASSOmp3_VitorFernandeseDorgivalDantas.mp3"},
-  {"id":101,"artist":"FORROZAO A3","title":"BRUTINHA","genero":"FORRÓ","src":"BRUTINHA_FORROZAOA3.mp3"},
+{"id":101,"artist":"FORROZAO A3","title":"BRUTINHA","genero":"FORRÓ","src":"BRUTINHA_FORROZAOA3.mp3"},
 {"id":102,"artist":"Calcinha Preta","title":"Meu Grande Amor","genero":"FORRÓ","src":"MeuGrandeAmor_CalcinhaPreta.mp3"},
 {"id":103,"artist":"Desejo de Menina","title":"PERFUME","genero":"FORRÓ","src":"PERFUME_DesejodeMenina.mp3"},
 {"id":104,"artist":"Z Vaqueiro Wesley Safad NATTAN","title":"DNA do Mato","genero":"FORRÓ","src":"DNAdoMato_ZVaqueiroWesleySafadNATTAN.mp3"},
 {"id":105,"artist":"Z Vaqueiro Xand","title":"Hoje Tem","genero":"FORRÓ","src":"HojeTem_ZVaqueiroXand.mp3"},
 {"id":106,"artist":"Silvnia e Berg Duas Paixes","title":"Amor Eu N o Consigo","genero":"FORRÓ","src":"AmorEuNoConsigo_SilvniaeBergDuasPaixes.mp3"},
 {"id":107,"artist":"Patrick Costa Henrique e Juliano Xand Avio","title":"Desta","genero":"FORRÓ","src":"Desta_PatrickCostaHenriqueeJulianoXandAvio.mp3"},   
-   {"id":108,"artist":"Zé Cantor-Farra-do-Zé","title":"ZÉ NO AUGUTIN","genero":"FORRÓ","src":"Z_Cantor-Farra-do-Z_no_Austin.mp3"}    
-]     
-
+{"id":108,"artist":"Zé Cantor-Farra-do-Zé","title":"ZÉ NO AUGUTIN","genero":"FORRÓ","src":"Z_Cantor-Farra-do-Z_no_Austin.mp3"}    
+]
