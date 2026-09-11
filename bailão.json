@@ -3,5 +3,8 @@
 {"id":2,"artist":"SORÓ SILVA E ROBÉRIO E SEUS TECLADOS","title":"NAIARA","genero":"POP","src":"NAIARA_SORO_SILVA_E_ROBERIO_E_SEUS_TECLADOS.mp3"},
 {"id":3,"artist":"Alemão do Forró e Vh Alexandre","title":"EU TE ENTENDO PASSARINHO","genero":"POP","src":"EU_TE_ENTENDO_PASSARINHO_Alemao_do_Forro_e_Vh_Alexandre.mp3"},
 {"id":4,"artist":"Guilherme Silva","title":"BARQUINHA","genero":"POP","src":"BARQUINHA_Guilherme_Silva.mp3"},
-  {"id":5,"artist":"Rio-Negro & Solimões","title":"Rio-Negro-Sol-Chapeludo.mp3","genero":"POP","src":"Rio-Negro-Sol-Chapeludo.mp3"}
+  {"id":5,"artist":"Rio-Negro & Solimões","title":"Rio-Negro-Sol-Chapeludo.mp3","genero":"POP","src":"Rio-Negro-Sol-Chapeludo.mp3"},
+  {"id":6,"artist":"Sérgio Silva","title":"QUEM MANDA EM MIM","genero":"BAILÃO","src":"QUEM_MANDA_EM_MIM_Sergio_Silva.mp3"},
+{"id":7,"artist":"FORROZÃO A3","title":"SAUDADE CIGANA","genero":"BAILÃO","src":"SAUDADE_CIGANA_FORROZAO_A.mp3"},
+{"id":8,"artist":"Rafa e Junior Zé Felipe","title":"A Cara do Rolo","genero":"BAILÃO","src":"A_Cara_do_Rolo_Rafa_e_Junior_Ze_Felipe.mp3"}
 ]
