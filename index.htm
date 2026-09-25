@@ -205,7 +205,6 @@
         <div class="teaching-bar">👆 Toque na tela para <span class="cyan">controles</span></div>
     </div>
 
-    <!-- Modais -->
     <div class="fav-modal" id="favModal">
         <button class="close-fav" id="closeFavModal"><i class="fas fa-times"></i></button>
         <h3><i class="fas fa-heart" style="color:#ff2d7f; -webkit-text-fill-color: #ff2d7f;"></i> Suas Favoritas</h3>
@@ -258,6 +257,7 @@
             let musicas = [];
             let currentPlaylist = [];
             let currentIndex = 0;
+            let musicaAtual = null;   // 🔧 CORREÇÃO: música efetivamente em reprodução
             let isPlaying = false;
             let shuffleMode = false;
             let isBackgroundActive = false;
@@ -492,7 +492,8 @@
                     musicas = data.filter(m => m.src && m.src.trim() && m.title && m.title.trim());
                     musicas.forEach(m => { 
                         m.id = m.id || `forrodez_${Math.random().toString(36).substr(2, 6)}`; 
-                        m.genero = GENERO; 
+                        // 🔧 CORREÇÃO: respeita o genero do JSON; só preenche se vazio
+                        if (!m.genero || !m.genero.trim()) m.genero = GENERO;
                     });
                     
                     console.log(`✅ FORRÓ DEZ carregou ${musicas.length} músicas`);
@@ -537,6 +538,7 @@
 
             function updateNowPlaying(t) {
                 if (t) {
+                    musicaAtual = t;   // 🔧 CORREÇÃO: guarda a música em reprodução
                     nowTitle.textContent = t.title;
                     nowArtist.textContent = t.artist;
                     scrollText.innerHTML = `🎵 ${t.title} - ${t.artist} [${GENERO}] 🎵`;
@@ -559,7 +561,14 @@
                 updateNowPlaying(track);
                 adicionarAoHistorico(track);
 
-                const urls = gerarUrlsAlternativas(track);
+                // 🔧 CORREÇÃO: usa src_cache se existir
+                let urls = [];
+                try {
+                    const cached = localStorage.getItem('src_cache_' + track.id);
+                    if (cached && cached.startsWith('http')) urls.push(cached);
+                } catch(e) {}
+                gerarUrlsAlternativas(track).forEach(u => { if (!urls.includes(u)) urls.push(u); });
+
                 if (urls.length === 0) { 
                     showNotification("❌ Sem URL", 1000); 
                     carregandoMusica = false; 
@@ -662,17 +671,19 @@
             function nextTrack() {
                 if (carregandoMusica) return;
                 if (!currentPlaylist || currentPlaylist.length === 0) { currentPlaylist = shuffleArray([...musicas]); currentIndex = 0; }
-                if (isPlaying) playMusic();
-                else { 
-                    const t = obterProximaMusica(); 
-                    if (t) { 
-                        ultimoId = t.id; 
-                        updateNowPlaying(t); 
-                        adicionarAoHistorico(t); 
+                if (isPlaying || !audio.paused) {
+                    playMusic();
+                } else {
+                    // 🔧 CORREÇÃO: usa obterProximaMusica consistentemente
+                    const t = obterProximaMusica();
+                    if (t) {
+                        ultimoId = t.id;
+                        updateNowPlaying(t);
+                        adicionarAoHistorico(t);
                         const urls = gerarUrlsAlternativas(t);
-                        audio.src = urls[0] || t.src; 
-                        audio.load(); 
-                    } 
+                        audio.src = urls[0] || t.src;
+                        audio.load();
+                    }
                 }
                 showControls();
             }
@@ -680,18 +691,33 @@
             function prevTrack() {
                 if (carregandoMusica) return;
                 if (!currentPlaylist || currentPlaylist.length === 0) { nextTrack(); return; }
-                if (currentIndex <= 0) currentIndex = currentPlaylist.length - 1;
-                else { currentIndex -= 2; if (currentIndex < 0) currentIndex = 0; }
-                if (currentIndex >= currentPlaylist.length) currentIndex = currentPlaylist.length - 1;
-                const t = currentPlaylist[currentIndex];
+
+                // 🔧 CORREÇÃO: lógica de índice consistente
+                // currentIndex aponta para a PRÓXIMA a tocar; então a atual é currentIndex - 1
+                let idxAtual = currentIndex - 1;
+                if (idxAtual < 0) idxAtual = currentPlaylist.length - 1;
+                let idxAnterior = idxAtual - 1;
+                if (idxAnterior < 0) idxAnterior = currentPlaylist.length - 1;
+
+                const t = currentPlaylist[idxAnterior];
                 if (!t) { nextTrack(); return; }
+
+                currentIndex = idxAnterior + 1; // próximo a tocar será depois do anterior
                 ultimoId = t.id;
                 updateNowPlaying(t);
                 adicionarAoHistorico(t);
+
                 const urls = gerarUrlsAlternativas(t);
-                if (isPlaying) { audio.pause(); audio.src = urls[0] || t.src; audio.load(); audio.play().catch(() => {}); }
-                else { audio.src = urls[0] || t.src; audio.load(); }
-                currentIndex++;
+                const url = urls[0] || t.src;
+                if (isPlaying || !audio.paused) {
+                    audio.pause();
+                    audio.src = url;
+                    audio.load();
+                    audio.play().catch(() => {});
+                } else {
+                    audio.src = url;
+                    audio.load();
+                }
                 showControls();
             }
 
@@ -699,7 +725,7 @@
                 shuffleMode = !shuffleMode;
                 shuffleBtn.classList.toggle('active', shuffleMode);
                 if (shuffleMode && currentPlaylist.length > 1) {
-                    const atualId = currentPlaylist[currentIndex % currentPlaylist.length]?.id;
+                    const atualId = musicaAtual ? musicaAtual.id : null;
                     currentPlaylist = shuffleArray(currentPlaylist);
                     if (atualId) {
                         const idx = currentPlaylist.findIndex(m => m.id === atualId);
@@ -835,8 +861,9 @@
             audio.addEventListener('pause', () => { isPlaying = false; playBtn.innerHTML = '<i class="fas fa-play"></i>'; equalizer.classList.add('paused'); stopTimer(); });
             audio.addEventListener('ended', () => { if (!carregandoMusica) nextTrack(); });
 
+            // 🔧 CORREÇÃO: usa musicaAtual
             heartBtn.addEventListener('click', () => {
-                const m = currentPlaylist[currentIndex % currentPlaylist.length] || currentPlaylist[0];
+                const m = musicaAtual;
                 if (m) { toggleFavorito(m.id); renderFavList(); updateFavCount(); }
             });
 
@@ -854,8 +881,10 @@
 
             document.getElementById('fabVoltar').addEventListener('click', voltarPlay12);
             document.getElementById('voltarMenuBtn').addEventListener('click', voltarPlay12);
+
+            // 🔧 CORREÇÃO: usa musicaAtual
             document.getElementById('fabShare').addEventListener('click', () => {
-                const t = currentPlaylist[currentIndex % currentPlaylist.length] || currentPlaylist[0];
+                const t = musicaAtual;
                 if (!t) { showNotification('Nenhuma música tocando', 1000); return; }
                 const msg = `🎵 Estou ouvindo "${t.title}" - ${t.artist} no PLAY 12 FORRÓ DEZ! 🪗`;
                 if (navigator.share) { navigator.share({ title: 'PLAY 12 FORRÓ DEZ', text: msg, url: location.href }).catch(() => {}); }
@@ -915,6 +944,7 @@
                 showControls();
             });
 
+            // 🔧 CORREÇÃO: usa musicaAtual na tecla F
             document.addEventListener('keydown', (e) => {
                 if (e.target.tagName === 'INPUT') return;
                 switch(e.key) {
@@ -922,7 +952,7 @@
                     case 'ArrowRight': nextTrack(); break;
                     case 'ArrowLeft': prevTrack(); break;
                     case 's': case 'S': toggleShuffle(); break;
-                    case 'f': case 'F': const m = currentPlaylist[currentIndex % currentPlaylist.length] || currentPlaylist[0]; if (m) { toggleFavorito(m.id); renderFavList(); updateFavCount(); } break;
+                    case 'f': case 'F': if (musicaAtual) { toggleFavorito(musicaAtual.id); renderFavList(); updateFavCount(); } break;
                 }
             });
 
@@ -935,11 +965,12 @@
 
             document.getElementById('favModal').addEventListener('click', (e) => { if (e.target === document.getElementById('favModal')) document.getElementById('favModal').classList.remove('open'); });
 
+            // 🔧 CORREÇÃO: usa musicaAtual no duplo toque
             let lastTap = 0;
             document.getElementById('nowPlaying').addEventListener('click', (e) => {
                 const now = Date.now();
                 if (now - lastTap < 300 && now - lastTap > 50) {
-                    const m = currentPlaylist[currentIndex % currentPlaylist.length] || currentPlaylist[0];
+                    const m = musicaAtual;
                     if (m) { toggleFavorito(m.id); renderFavList(); updateFavCount(); showNotification('❤️ Adicionado!', 1000); }
                 }
                 lastTap = now;
