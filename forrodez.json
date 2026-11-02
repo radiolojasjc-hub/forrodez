@@ -142,12 +142,10 @@
 {"id":142,"artist":"os Barões da Pisadinha","title":"Mamãe Que É Mamãe","genero":"Forró","src":"Mamae_Que_E_Mamae_os_Baroes_da_Pisadinha.mp3"},
 {"id":143,"artist":"os Barões da Pisadinha","title":"Se Namorar Fosse Bom","genero":"Forró","src":"Se_Namorar_Fosse_Bom_os_Baroes_da_Pisadinha.mp3"},
   {"id":144,"artist":"ZéVaqueiro","title":"Quero-um-Country","genero":"Forró","src":"QueroumCountryPartZeVaqueiro.mp3"},
-  
-{"id":145,"artist":"Batista Lima","title":"Voltei / Veneno / Invernos e Verões","genero":"Forró","src":"Voltei_Veneno_Invernos_e_Veroes_Batista_Lima.mp3"},
-{"id":146,"artist":"Kátia e Aduíllio","title":"Sexy Yemanjá","genero":"Forró","src":"Sexy_Yemanja_Katia_e_Aduillio.mp3"},
-{"id":147,"artist":"Giulia Trindade","title":"Que Tontos Que Loucos","genero":"Forró","src":"Que_Tontos_Que_Loucos_Giulia_Trindade.mp3"},
-{"id":148,"artist":"Solange Almeida","title":"Pra gente voltar","genero":"Forró","src":"Pra_gente_voltar_Solange_Almeida.mp3"},
-{"id":149,"artist":"Aduílio Mendes","title":"Baião de Dois","genero":"Forró","src":"Baiao_de_Dois_Aduilio_Mendes.mp3"},
-{"id":150,"artist":"Kátia e Aduíllio","title":"Não Vivo Sem Você","genero":"Forró","src":"Nao_Vivo_Sem_Voce_Katia_e_Aduillio.mp3"}
+  {"id":145,"artist":"Aduílio Mendes","title":"Baião de Dois","genero":"Music","src":"Baiao_de_Dois_Aduilio_Mendes.mp3"},
+{"id":146,"artist":"Kátia e Aduíllio","title":"Não Vivo Sem Você","genero":"Music","src":"Nao_Vivo_Sem_Voce_Katia_e_Aduillio.mp3"},
+{"id":147,"artist":"Solange Almeida","title":"Pra gente voltar","genero":"Music","src":"Pra_gente_voltar_Solange_Almeida.mp3"},
+{"id":148,"artist":"Giulia Trindade","title":"Que Tontos Que Loucos","genero":"Music","src":"Que_Tontos_Que_Loucos_Giulia_Trindade.mp3"},
+{"id":149,"artist":"Kátia e Aduíllio","title":"Sexy Yemanjá","genero":"Music","src":"Sexy_Yemanja_Katia_e_Aduillio.mp3"},
+{"id":150,"artist":"Batista Lima","title":"Voltei / Veneno / Invernos e Verões","genero":"Music","src":"Voltei_Veneno_Invernos_e_Veroes_Batista_Lima.mp3"}
 ]
-
