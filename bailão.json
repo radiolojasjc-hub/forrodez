@@ -51,5 +51,10 @@
 {"id":50,"artist":"Forró Cintura de Mola","title":"TEM ALGUÉM NO SEU LUGAR - Forró Cintura de Mola","genero":"BAILÃO","src":"T._ALGUEM_NO_s._LGR_-_Forro_Forro_Cintura_de_Mola.mp3"},
 {"id":51,"artist":"Juliana Bonde","title":"Bonde Do Forró - Ainda Queima a Esperança","genero":"BAILÃO","src":"Bonde_Do_Forro_-_Ainda_Queima_a_Esperanca_Juliana_Bonde.mp3"},
 {"id":52,"artist":"Chicote De Luxo","title":"PAPUDIM - OLHA O CHICOTÃO","genero":"BAILÃO","src":"PAPUDIM_-_OLHA_O_CHICOTAO_Chicote_De_Luxo.mp3"},
-{"id":53,"artist":"Leãozinho Do Forró","title":"ACERTEI NA MOÇA","genero":"BAILÃO","src":"ACERTEI_NA_MOCA_Leaozinho_Do_Forro.mp3"} 
+{"id":53,"artist":"Leãozinho Do Forró","title":"ACERTEI NA MOÇA","genero":"BAILÃO","src":"ACERTEI_NA_MOCA_Leaozinho_Do_Forro.mp3"},
+  {"id":54,"artist":"Alemão do Forró","title":"Óculos Alemão do Brasil","genero":"Music","src":"alemaodoforro_oculosalemaobrasil.mp3"},
+{"id":55,"artist":"Alemão do Forró","title":"Tem Ciúme","genero":"Music","src":"alemaodoforro_temciume.mp3"},
+{"id":56,"artist":"Nando Moreno","title":"Peão Ciumento ","genero":"Music","src":"nandomoreno_peaociumento.mp3"},
+{"id":57,"artist":"Alemão do Forró","title":"Se Não For Fernando Juciara","genero":"Music","src":"alemaodoforro_senaoforfernandojuciara.mp3"}
+
 ]
